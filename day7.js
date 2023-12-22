@@ -107,8 +107,41 @@ let { name, email, ...rest } = obj1;
 // console.log(rest);
 
 function ctoa(char) {
-  const result = String.charCodeAt(char);
+  const result = char.charCodeAt(char);
   return result;
 }
 
-console.log(ctoa("A"));
+// console.log(ctoa("A"));
+// console.log(ctoa("m"));
+// console.log(ctoa("["));
+
+function totalCups(cups) {
+  const result = Math.floor(cups / 6) + cups;
+
+  return result;
+}
+
+// console.log(totalCups(6));
+// console.log(totalCups(12));
+// console.log(totalCups(213));
+
+function wordLength(arr) {
+  const result = arr.map((el) => el.length);
+  return result;
+}
+
+// console.log(wordLength(["Halloween", "Thanksgiving", "Christmas"]));
+// console.log(
+//   wordLength(["She", "sells", "seashells", "down", "by", "the", "seashore"])
+// );
+
+function getFileName(filePath) {
+  const index = filePath.lastIndexOf("/");
+
+  const result = filePath.slice(index + 1);
+
+  return result;
+}
+
+// console.log(getFileName("C:/Projects/pil_tests/ascii/edabit.txt"));
+// console.log(getFileName("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
